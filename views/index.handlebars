@@ -1,6 +1,6 @@
 <div class="jumbotron bg-cover" <div class="container">
 
-    <h1 class="text-center mb-5 display-1">Eat-Da-Burger</h1>
+    <h1 class="text-center mb-5 display-1 main">Eat-Da-Burger</h1>
 </div>
 </div>
 
@@ -8,11 +8,11 @@
 
     <div class="form-group col-md-6 mx-auto create-form">
 
-        <h1 class="text-center display-5" id="enterBurger"><strong> Enter a burger you want to eat.</strong></h1>
+        <h1 class="text-center display-5" id="enterBurger"><strong> Enter a burger </strong></h1>
 
         <textarea class="form-control mx-auto d-block" type="text" name="burgers" id="createBurger" cols="30"
             rows="3"></textarea>
-        <button id="submitBtn" class="mx-auto d-block mb-5" type="submit">Submit</button>
+        <button id="submitBtn" class=" btn mx-auto d-block mb-5 burgerSubmit" type="submit">Submit</button>
     </div>
 </form>
 
@@ -32,7 +32,7 @@
                             {{#each burgers}}
                             {{#unless devoured}}
                             <span><strong> {{this.id}} - {{this.burger_name}}</strong></span> <br>
-                            <button class="btn btn-sm" id="devourBurger" type="button" data-id="{{this.id}}"
+                            <button class="btn btn-sm devourBurger" id="devourBurger" type="button" data-id="{{this.id}}"
                                 data-devouredChange="{{devour}}">Devour
                                 it!</button>
                             <hr>

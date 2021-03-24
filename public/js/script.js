@@ -14,10 +14,13 @@ $(function () {
 			location.reload();
 		});
 	});
-	$("#devourBurger").on("click", function (event) {
+
+	$(".devourBurger").on("click", function (event) {
 		event.preventDefault();
 
 		let id = $(this).data("id");
+		console.log("hi");
+		console.log(id, "id");
 		let devouredChange = {
 			devoured: 1,
 		};
