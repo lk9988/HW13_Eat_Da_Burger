@@ -1,0 +1,86 @@
+<div class="jumbotron bg-cover" <div class="container">
+
+    <h1 class="text-center mb-5 display-1">Eat-Da-Burger</h1>
+</div>
+</div>
+
+<form class="create-form" action="/" method="POST">
+
+    <div class="form-group col-md-6 mx-auto create-form">
+
+        <h1 class="text-center display-5" id="enterBurger"><strong> Enter a burger you want to eat.</strong></h1>
+
+        <textarea class="form-control mx-auto d-block" type="text" name="burgers" id="createBurger" cols="30"
+            rows="3"></textarea>
+        <button id="submitBtn" class="mx-auto d-block mb-5" type="submit">Submit</button>
+    </div>
+</form>
+
+
+
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <div class="text-center card-title h2">Burgers I would like to eat</div>
+                <div class="card-body">
+                    <div class="list-group list-group-flush">
+
+                        <ul>
+                            {{#each burgers}}
+                            {{#unless devoured}}
+                            <span><strong> {{this.id}} - {{this.burger_name}}</strong></span> <br>
+                            <button class="btn btn-sm" id="devourBurger" type="button" data-id="{{this.id}}"
+                                data-devouredChange="{{devour}}">Devour
+                                it!</button>
+                            <hr>
+                            {{/unless}}
+                            {{/each}}
+
+                        </ul>
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <div class="text-center card-title h2"> Devoured Burgers</div>
+                <div class="card-body">
+                    <div>
+                        <div class="list-group list-group-flush">
+                            <ul>
+
+                                {{#each burgers}}
+                                {{#if devoured}}
+
+                                <span><strong> {{this.id}} - {{this.burger_name}}</strong></span><br>
+
+                                <button class="btn btn-sm" id="deleteBtn" type="button" data-id="{{this.id}}"
+                                    data-devouredChange="{{devour}}">Delete</button>
+                                <hr>
+                                {{/if}}
+                                {{/each}}
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+</div>

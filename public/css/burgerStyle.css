@@ -1,0 +1,22 @@
+body {
+	font-family: "Karla", sans-serif;
+	font-family: "Source Sans Pro", sans-serif;
+	background-color: #f5f5f5;
+	background-image: url("/img/burger.png");
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center center;
+  }
+  
+  
+  .jumbotron {
+	min-height: 200px;
+  }
+  .btn{
+	  background-color: #9A467F;
+	  color: white;
+  }
+  #enterBurger{
+	  background-color: #EFD29F;
+  }
